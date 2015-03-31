@@ -1,0 +1,167 @@
+/* ----------------------------------------------------------
+    Base
+----------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: #fdfdfd;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
+
+a         { color: #2a7ae2; text-decoration: none; }
+a:hover   { color: #000; text-decoration: underline; }
+a:visited { color: #205caa; }
+
+/* Utility */
+
+.wrap:before,
+.wrap:after { content:""; display:table; }
+.wrap:after { clear: both; }
+.wrap {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+/* ----------------------------------------------------------
+    Typography
+/* ----------------------------------------------------------*/
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1;
+    font-style: italic;
+    color: #072f39;
+    text-shadow: 0 .0625rem #2f8cb2;
+    margin: 1rem 0;
+}
+h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 4.375rem;
+    line-height: 1.25;
+    font-style: italic;
+    color: #307a99;
+    text-shadow: 0 .0625rem #ffffff;
+    text-align: center;
+    margin: .3rem 0 0 0;
+}
+h3 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+}
+h4 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-style: italic;
+    color: #33393b;
+    text-shadow: 0 .0625rem #ffffff;
+    margin: .3rem 0 0 0;
+}
+h5 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #307a99;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+
+/* ----------------------------------------------------------
+    Button Styles
+/* ----------------------------------------------------------*/
+
+.buttons {
+    display: block;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    }
+.button-one {
+    &:hover {  }
+}
+
+.button-two {
+    &:hover {  }
+}
+
+.button-three {
+    &:hover {  }
+}
+
+
+
+/* ----------------------------------------------------------
+    Layout Styles
+/* ----------------------------------------------------------*/
+
+/* Site header */
+
+.site-header {  }
+
+.site-nav {  }
+
+/* Site footer */
+
+.site-footer {  }
+
+
+/* ----------------------------------------------------------
+    Page Content styles
+----------------------------------------------------------*/
+
+.page-content {
+  padding: 0;
+  background-color: #fff;
+}
+
+
+/* ----------------------------------------------------------
+    Media Queries
+----------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 850px) {
+    
+}
+
+@media screen and (max-width: 750px) {
+    
+}
+
+@media screen and (max-width: 640px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 400px) {
+    
+}
