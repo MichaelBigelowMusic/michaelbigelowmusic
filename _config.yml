@@ -1,0 +1,10 @@
+# Site settings
+title: Michael Bigelow Music
+email: mb@michaelbigelowmusic.com
+description: "This is the site description located in the config file"
+baseurl: ""
+url: "http://michaelbigelowmusic.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty

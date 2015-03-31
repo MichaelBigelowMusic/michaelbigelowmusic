@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="post">
+
+  <article class="post-content">
+      <div class="project-page description">
+        <div class="row">
+            <div class="title large-7 medium-7 columns">
+                <h3>{{ page.category }}</h3>
+                <h1>{{ page.title }}</h1>
+            </div>
+            <div class="details large-5 medium-5 columns">
+                <h4>My Role</h4>
+                <p class="categories">{{ page.sub-categories }}</p>
+                {% if page.objective %}
+                <h4>Mission Objective</h4>
+                <p class="objective">{{ page.objective }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+  {{ content }}
+  </article>
+
+</div>
