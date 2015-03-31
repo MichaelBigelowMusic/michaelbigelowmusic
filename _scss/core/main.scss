@@ -43,12 +43,13 @@ a:visited { color: #205caa; }
 /* ----------------------------------------------------------
     Typography
 /* ----------------------------------------------------------*/
+
 h1 {  }
 h2 {  }
 h3 {  }
 h4 {  }
 h5 {  }
-
+p  {  }
 
 
 /* ----------------------------------------------------------
@@ -69,13 +70,80 @@ h5 {  }
 
 /* Site header */
 
-.site-header {  }
+.site-header {}
 
-.site-nav {  }
+.hello-bar.construction {
+    text-align: center;
+    background: #4990c1;
+    padding: 1rem 0;
+    p {
+        font-weight: 700;
+        color: #fff;
+        text-shadow: 1px 1px #38698b;
+        margin: 0;
+    }
+}
 
 /* Site footer */
 
-.site-footer {  }
+.site-footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #dedede;
+    p {
+        margin: 0;
+        color: #7e7e7e;
+        font-size: .875rem;
+    }
+}
+
+/* ----------------------------------------------------------
+    Splash Page
+/* ----------------------------------------------------------*/
+
+.splashpage {
+    min-height: 450px;
+    height: 100vh;
+    height: calc(100vh - 6.95rem);
+    text-align: center;
+    position: relative;
+    .inner {
+        margin: 5rem 0;
+        position: absolute;
+        top: 12%;
+    }
+    img.logo { margin: 0 auto; display: block; }
+}
+
+ul.social-links {
+    margin: 2rem auto 0;
+    display: inline-block;
+    list-style: none;
+}
+li {
+    display: block;
+    margin: 0 .25rem;
+    float: left;
+    a {
+        width: 53px;
+        height: 54px;
+        margin-top: .25rem;
+        display: block;
+        cursor: pointer;
+        -moz-transition: margin .125s; /* Firefox */
+        -webkit-transition: margin .125s; /* Safari 3.1 to 6.0 */
+        transition: margin .125s;
+        -moz-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out; /* Safari and Chrome */
+        transition-timing-function: ease-in-out; /* Firefox */
+        &:hover { margin-top: 0; }
+        &.facebook { background: url('/images/icon-facebook.png'); }
+        &.googleplus { background: url('/images/icon-googleplus.png'); }
+        &.youtube { background: url('/images/icon-youtube.png'); }
+        &.linkedin { background: url('/images/icon-linkedin.png'); }
+    }
+
+}
 
 /* ----------------------------------------------------------
     Media Queries
@@ -99,9 +167,23 @@ h5 {  }
 
 @media screen and (max-width: 600px) {
 
+}
+
+@media screen and (max-width: 480px) {
+
+    //Splashpage
+    .splashpage {
+        height: auto;
+        min-height: 0;
+        .inner { position: relative; margin: 4rem 0 6rem; }
+    }
 
 }
 
 @media screen and (max-width: 400px) {
+
+}
+
+@media screen and (max-width: 320px) {
 
 }
