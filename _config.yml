@@ -1,9 +1,9 @@
 # Site settings
 title: Michael Bigelow Music
 email: mb@michaelbigelowmusic.com
-description: "This is the site description located in the config file"
+description: ""
 baseurl: ""
-url: "http://michaelbigelowmusic.com"
+url: "michaelbigelowmusic.com"
 
 # Build settings
 markdown: kramdown
