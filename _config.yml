@@ -8,3 +8,9 @@ url: "michaelbigelowmusic.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+page: 
+    - name: saxophones
+      url: www.google.com
+    - name: music composition
+      url: www.yahoo.com
