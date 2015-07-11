@@ -9,7 +9,7 @@ url: "michaelbigelowmusic.com"
 markdown: kramdown
 permalink: pretty
 
-page: 
+pages: 
     - name: saxophones
       url: www.google.com
     - name: music composition

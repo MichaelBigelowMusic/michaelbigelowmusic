@@ -1,5 +1,15 @@
 <footer class="site-footer">
-    <div class="row">
-        <p>© 2015 {{ site.title }}. All&nbsp;Rights&nbsp;Reserved.</p>
+    <div class="row wide">
+
+    <a class="site-title" href="{{ site.baseurl }}/"><div class="mbmlogo"></div></a>
+
+    <nav class="site-nav">
+        <div class="trigger">
+        {% for page in site.pages %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endfor %}
+        </div>
+    </nav>
+
     </div>
 </footer>

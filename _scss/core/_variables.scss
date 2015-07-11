@@ -4,9 +4,11 @@
 
     // Imports
     @import url('http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic');
+    @import url('http://fonts.googleapis.com/css?family=Bitter:400,700');
     
     // Definitions
     $noto: 'Noto Sans', Helvetica, Arial, sans-serif;
+    $bitter: 'Bitter', Georgia, serif;
 
 
 /*  ----------------------------------------------------------
@@ -16,12 +18,16 @@
     // Neutrals
     
     $white: #ffffff;
-    $alabaster: #f9f9f9;
-    $silver: #c7c7c7;
+    $alabaster: #f9f9f9; //near white
+    $gallery: #ececec; //light gray
+    $silver: #c7c7c7; //medium gray
+    $mineshaftLight: #373737; //dark gray
+    $mineshaft: #242424;
     $black: #000000;
     
     
     // Blues
+    $jellyBean: #2d7cb3;
     $outerspace: #313334;
     
     // Greeens
@@ -36,14 +42,17 @@
 /*  ----------------------------------------------------------*/
     
     // Text
-    $defaultText: $outerspace;
+    $text-default: $outerspace;
+    $text-blue: $jellyBean;
+    $text-white: $white;
     
     // Buttons
-    $greenButton: $fruitsalad;
-    $greenButtonDark: $apple;
+    $button-green: $fruitsalad;
+    $button-green--dark: $apple;
     
     // Border
-    $grayBorder1: $silver;
+    $border-gray--vary1: $gallery;
+    $border-gray--vary2: $silver;
     
     // Backgrounds
-    $lightBackground: $alabaster;
+    $background-light: $alabaster;
