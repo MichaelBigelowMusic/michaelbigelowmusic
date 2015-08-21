@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-    <body>
+    <body class="cbp-spmenu-push">
     
     {% if page.is_underconstruction %}
         {% include header-construction.html %}
@@ -11,44 +11,7 @@
         {% include header.html %}
     {% endif %}
 
-    <div class="page-content">
-
-        {{ content }}
-        
-        <!-- Contact Form -->
-        <section class="contact">
-            <div class="row">
-        <!--
-                <div class="columns medium-3 medium-offset-2">
-                    <img src="images/avatar-michael-1.png" class="avatar" alt="Michael's Face" width="147" height="147" />
-                </div>
-        -->
-                <div class="columns medium-7 medium-offset-2">
-                    <h3>{{ page.contact_title }}</h3>
-                    
-                    <ul class="social">
-                        <li><a href=""><img src="/images/icon-facebook.png" alt="icon-facebook" width="53" height="54" /></a></li>
-                        <li><a href=""><img src="/images/icon-googleplus.png" alt="icon-googleplus" width="53" height="54" /></a></li>
-                        <li><a href=""><img src="/images/icon-youtube.png" alt="icon-youtube" width="53" height="54" /></a></li>
-                        <li><a href=""><img src="/images/icon-linkedin.png" alt="icon-linkedin" width="53" height="54" /></a></li>
-                    </ul>
-                    
-                    <a href="tel:801-550-3981" class="button-three">801.550.3951</a>
-                    <a href="mailto:mb@michaelbigelowmusic.com" class="button-three">mb@michaelbigelowmusic.com</a>
-                    
-                    <form>
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="John Conner"/>
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" placeholder="robotkiller11@gmail.com"/>
-                        <label for="message">Your Message</label>
-                        <textarea id="message"></textarea>
-                        <button formaction="submit" class="button-one">Send!</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </div>
+    {% include contact-footer.html %}
 
     {% include footer.html %}
 

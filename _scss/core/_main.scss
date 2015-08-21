@@ -4,7 +4,7 @@
 
 @import
     "_typography",
-    "_buttons",
+    "_button-defaults",
     "_forms",
     "_icons";
 
@@ -51,6 +51,24 @@ a:visited { color: #205caa; }
 
 .clear { clear: both; }
 
+/* ----------------------------------------------------------
+    Various Elements
+/* ----------------------------------------------------------*/
+
+
+// Social Media Icons
+
+.social-wrap {
+    display: block;
+    width: 100%;
+    margin: .125rem 0 .5rem;
+}
+.social {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: .25rem;
+}
 
 /* ----------------------------------------------------------
     Header & Footer
@@ -61,10 +79,23 @@ a:visited { color: #205caa; }
 .site-header {
     background: $white;
     padding: .75rem 0.9375rem 1rem;
+    .mbmlogo { display: inline-block; }
+    .columns { padding: 0; }
+    .social-wrap .inner { float: right; }
 }
-.nav {
-    li {
-        color: $outerspace;
+
+.site-nav {
+    display: block;
+    float: right;
+    a {
+        color: $link--vary2;
+        margin-left: .625rem;
+        font-weight: 700;
+        font-size: .875rem;
+        &:hover {
+            text-decoration: none;
+            color: $link-hover--vary2;
+        }
     }
 }
 
@@ -79,6 +110,62 @@ a:visited { color: #205caa; }
         margin: 0;
     }
 }
+
+// Menu Overlay
+
+#menu-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(45,124,179,.98);
+    z-index: 10;
+    -webkit-transition: all .25s ease .25s;
+    -moz-transition: all .25s ease .25s;
+    -o-transition: all .25s ease .25s;
+    transition: all .25s ease .25s;
+    display: none;
+    &.show {
+        display: block;
+    }
+    .page-link {
+        text-align: center;
+        text-transform: uppercase;
+        padding: .75rem;
+        display: block;
+        color: $white;
+        font-weight: 400;
+        
+    }
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+    .button-three {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+        text-align: center;
+        padding: .75rem;
+        text-transform: uppercase;
+    }
+    .social-wrap {
+        .inner {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .social {
+        width: 50px;
+        height: 50px;
+        float: none;
+        display: inline-block;
+    }
+}
+
+
 
 // Site footer
 
@@ -227,6 +314,12 @@ section { padding: 3rem 0 4.5rem; }
         max-width: 17rem;
         margin-top: 1.375rem;
     }
+    .element-wrap {
+        padding: 1rem;
+        display: inline-block;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, .87);
+    }
     
     // Elements
     .button-one {
@@ -237,7 +330,9 @@ section { padding: 3rem 0 4.5rem; }
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
-        max-width: 275px;
+//         max-width: 275px;
+        width: 100%;
+        text-align: center;
     }
 
     
@@ -265,9 +360,13 @@ section { padding: 3rem 0 4.5rem; }
         padding: .5rem 0 0 0;
         h4, p { margin: 0; text-align: center; }
     }
+    .button-group { margin: .5rem auto 0; }
     
     //Typography
-    h3 { padding: 0; }
+    h3 {
+        padding: 0;
+        text-align: center;
+    }
 }
 
 .blocks {
@@ -376,6 +475,8 @@ a {
     &.plain { text-decoration: none; }
 }
 
+.clear { clear: both; }
+
 // .row.wide { max-width: 75rem; }
 
 /* ----------------------------------------------------------
@@ -401,16 +502,6 @@ a {
         }
     }
     
-    
-    .group-feature {
-        h3 { text-align: center; }
-        .button-group {
-            margin: 0 auto;
-        }
-        .members {
-            margin-top: 2rem;
-        }
-    }
 }
 
 @media screen and (max-width: 850px) {
@@ -418,7 +509,11 @@ a {
 }
 
 @media screen and (max-width: 750px) {
+    
+    .site-header {
 
+    }
+    
 }
 
 @media screen and (min-width: 640px) and (max-width: 1023px) {

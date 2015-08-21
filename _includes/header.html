@@ -1,15 +1,63 @@
-<header class="site-header">
-    <div class="row wide">
-
-    <a class="site-title" href="{{ site.baseurl }}/"><div class="mbmlogo"></div></a>
-
-    <nav class="site-nav">
-        <div class="trigger">
-        {% for page in site.pages %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endfor %}
+<nav id="menu-overlay">
+	<button class="button-three" id="close-menu">Close Menu</button>
+	<ul>
+    {% for page in site.nav-pages %}
+    <li>
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.name }}</a>
+    </li>
+    {% endfor %}
+	</ul>
+    <div class="social-wrap">
+        <div class="inner">
+            {% for social in site.social-links %}
+                <a class="social" href="{{ social.url }}"><img src="{{ site.baseurl }}/images/social-{{ social.name }}.png"/></a>
+            {% endfor %}
         </div>
-    </nav>
+        <div class="clear"></div>
+    </div>
+</nav>
+
+
+<header class="site-header">
+    <div class="row">
+        
+        <div class="columns large-4 small-4">
+            <a class="site-title" href="{{ site.baseurl }}/"><div class="mbmlogo"></div></a>
+        </div>
+
+        <div class="columns large-8 small-8">
+            
+            <div class="button-one" id="show-menu">MENU</div>
+            
+            <div class="social-wrap hide-for-small-down">
+                <div class="inner">
+                    {% for social in site.social-links %}
+                        <a class="social" href="{{ social.url }}"><img src="{{ site.baseurl }}/images/social-{{ social.name }}.png"/></a>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div>
+            <nav class="site-nav hide-for-small-down">
+                {% for page in site.nav-pages %}
+                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.name }}</a>
+                {% endfor %}
+                <div class="clear"></div>
+            </nav>
+        </div>
+        
+        <div class="clear"></div>
 
     </div>
 </header>
+
+<script>
+    $(document).ready(function(){
+       $('#show-menu').click(function(){
+           $('#menu-overlay').toggle('show');
+           $('#menu-overlay').fadeIn();
+       });
+       $('#close-menu').click(function(){
+           $('#menu-overlay').fadeToggle('show');
+       });
+    });
+</script>

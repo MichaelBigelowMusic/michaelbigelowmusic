@@ -9,8 +9,23 @@ url: "michaelbigelowmusic.com"
 markdown: kramdown
 permalink: pretty
 
-pages: 
-    - name: saxophones
-      url: www.google.com
-    - name: music composition
-      url: www.yahoo.com
+social-links:
+    - name: facebook
+      url: http://www.facebook.com/
+    - name: soundcloud
+      url: http://www.soundcloud.com/
+    - name: youtube
+      url: http://www.youtube.com/ 
+    - name: linkedin
+      url: http://www.linkedin.com/ 
+    - name: googleplus
+      url: http://www.googleplus.com/ 
+
+nav-pages: 
+    - name: Saxophones
+      url: saxophones
+    - name: Composition & Arranging
+      url: composition-arranging
+    - name: Music Instruction
+      url: music-instruction
+      

@@ -5,6 +5,7 @@
 .button-one {
     color: $white;
     font-weight: 700;
+    line-height: 1.125;
     background: $button-green;
     border: .0625rem solid $button-green;
     padding: .875rem 2.875rem 1rem;
@@ -69,6 +70,8 @@
     .button-one, .button-two, .button-three {
         width: 100%;
         margin: .25rem 0;
+        padding-left: .25rem;
+        padding-right: .25rem;
     }
 }
 

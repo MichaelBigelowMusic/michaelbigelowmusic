@@ -1,0 +1,91 @@
+---
+layout: default
+
+---
+
+<section class="banner sub sax">
+    
+    <div class="title row">
+        <div class="columns small-10 large-8 small-centered">
+            <h1 class="white">{{ page.heading_1 }}</h1>
+            <h2 class="understated white">{{ page.heading_2 }}</h2>
+            <a href="" class="plain"><button class="button-one center push-top-bottom--sml">{{ page.heading_button }}</button></a>
+        </div>
+    </div>
+    
+</section>
+
+
+<section class="blocks row">
+    
+    <div class="columns small-10 small-centered medium-9 medium-centered large-7 large-uncentered">
+        <ul class="block-sections clean">
+            {% for block in page.content_blocks %}
+                <li>
+                    <h4 class="blue">{{ block.title }}</h4>
+                    {% for paragraph in block.paragraphs %}
+                        <p>{{ paragraph.content }}</p>
+                    {% endfor %}
+                </li>
+            {% endfor %}
+            <li>
+        </ul>
+    </div>
+    
+    <div class="testimonials side columns large-4 large-offset-1">
+        <ul class="clean">
+            {% for testimonial in page.testimonials %}
+                <li class="columns medium-6 large-12">
+                    <span class="author">
+                        <h4>{{ testimonial.author }}</h4>
+                        <p>{{ testimonial.profession }}</p>
+                    </span>
+                    <p class="quote">&ldquo;{{ testimonial.content }}&rdquo;</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</section>
+
+
+<section class="blurb row">
+    
+    <div class="columns small-10 medium-9 large-8 small-centered">
+        <span class="icon {{ page.blurb_icon }}"></span>
+        <p>{{ page.blurb_content }}</p>
+    </div>
+
+</section>
+
+
+<section class="video">
+    
+    <div class="row">
+        <div class="columns large-5 large-push-7">
+            <h3 class="white">{{ page.video_title }}</h3>
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div class="g-ytsubscribe" data-channel="Michael Bigelow Music" data-layout="default" data-count="hidden"></div>
+        </div>
+        <div class="columns large-7 large-pull-5"> {{ page.video_embed }} </div>
+    </div>
+    
+</section>
+
+
+<section class="group-feature row">
+    
+    <div class="columns small-10 small-centered medium-9 large-7">
+        <h3>{{ page.group_name }}</h3>
+        <div class="push-top-bottom--med">
+            {% for paragraph in page.group_description %}
+                <p>{{ paragraph.content }}</p>
+            {% endfor %}
+        </div>
+        <div class="button-group">
+            <a href="" class="plain"><button class="button-one center push-top-bottom--sml">Book the Band</button></a>
+        </div>
+    </div>
+    
+</section>
+

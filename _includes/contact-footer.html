@@ -1,0 +1,44 @@
+<div class="page-content">
+
+    {{ content }}
+    
+    <!-- Contact Form -->
+    <section class="contact">
+        <div class="row">
+    <!--
+            <div class="columns medium-3 medium-offset-2">
+                <img src="images/avatar-michael-1.png" class="avatar" alt="Michael's Face" width="147" height="147" />
+            </div>
+    -->
+            <div class="columns medium-7 medium-offset-2">
+                <h3>{{ page.contact_title }}</h3>
+                
+                <div class="element-wrap">
+                    <div class="social-wrap">
+                        <div class="inner">
+                            {% for social in site.social-links %}
+                                <a class="social" href="{{ social.url }}"><img src="{{ site.baseurl }}/images/social-{{ social.name }}.png"/></a>
+                            {% endfor %}
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="tel:801-550-3981" class="button-three">801.550.3951</a>
+                    <a href="mailto:mb@michaelbigelowmusic.com" class="button-three">mb@michaelbigelowmusic.com</a>
+                    <button class="button-one">Send a Quick Message</button>
+                </div>
+                
+<!--
+                <form>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="John Conner"/>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="robotkiller11@gmail.com"/>
+                    <label for="message">Your Message</label>
+                    <textarea id="message"></textarea>
+                    <button formaction="submit" class="button-one">Send!</button>
+                </form>
+-->
+            </div>
+        </div>
+    </section>
+</div>
