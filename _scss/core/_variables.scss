@@ -23,11 +23,13 @@
     $silver: #c7c7c7; //medium gray
     $mineshaftLight: #373737; //dark gray
     $mineshaft: #242424;
+    $codGray: #1e1e1e;
     $black: #000000;
     
     
     // Blues
     $jellyBean: #2d7cb3;
+    $jellyBeanDark: #256693;
     $outerspace: #313334;
     
     // Greeens
@@ -58,6 +60,8 @@
     // Border
     $border-gray--vary1: $gallery;
     $border-gray--vary2: $silver;
+    $border-black--vary1: $black;
     
     // Backgrounds
     $background-light: $alabaster;
+    $background-dark: $codGray;

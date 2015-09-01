@@ -3,7 +3,7 @@ title: Michael Bigelow Music
 email: mb@michaelbigelowmusic.com
 description: ""
 baseurl: ""
-url: "michaelbigelowmusic.com"
+url: "http://www.michaelbigelowmusic.com"
 
 # Build settings
 markdown: kramdown
@@ -23,9 +23,11 @@ social-links:
 
 nav-pages: 
     - name: Saxophones
-      url: saxophones
+      url: /saxophones/
+      icon: icon-saxophone.html
     - name: Composition & Arranging
-      url: composition-arranging
+      url: /composition-arranging/
+      icon: icon-note.html
     - name: Music Instruction
-      url: music-instruction
-      
+      url: /music-instruction/
+      icon: icon-speech.html

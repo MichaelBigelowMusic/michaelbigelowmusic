@@ -25,7 +25,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color: $white;
+  background-color: $background-light;
 }
 
 .page-content {
@@ -50,6 +50,9 @@ a:visited { color: #205caa; }
 }
 
 .clear { clear: both; }
+.no-scroll {
+    overflow: hidden;
+}
 
 /* ----------------------------------------------------------
     Various Elements
@@ -114,13 +117,13 @@ a:visited { color: #205caa; }
 // Menu Overlay
 
 #menu-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(45,124,179,.98);
+    background: $background-dark;
     z-index: 10;
     -webkit-transition: all .25s ease .25s;
     -moz-transition: all .25s ease .25s;
@@ -131,31 +134,41 @@ a:visited { color: #205caa; }
         display: block;
     }
     .page-link {
-        text-align: center;
-        text-transform: uppercase;
-        padding: .75rem;
+        text-align: left;
+        padding: 1.125rem 0;
         display: block;
         color: $white;
-        font-weight: 400;
-        
+        font-weight: 700;
+        font-size: 1rem;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+        .icon {
+            float: left;
+            svg {
+                fill: $white;
+                height: 28px;
+                width: 26px;
+                margin-right: 1rem;
+            }
+        }
     }
     ul {
         list-style: none;
         margin-left: 0;
     }
-    .button-three {
+    li {
+        text-align: left;
+        border-bottom: .0625rem solid $border-black--vary1;
+    }
+
+    .row-inner {
         width: 100%;
-        border-radius: 0;
-        margin-top: 0;
-        text-align: center;
-        padding: .75rem;
-        text-transform: uppercase;
+        max-width: 290px;
+        display: block;
+        margin: 0 auto;
     }
     .social-wrap {
-        .inner {
-            display: block;
-            margin: 0 auto;
-        }
+
     }
     .social {
         width: 50px;
@@ -551,6 +564,10 @@ a {
             position: relative;
             padding: 0 0 3.5rem;
         }
+    }
+    
+    .site-header {
+        padding: .75rem 0.5rem 1rem;
     }
     
     .testimonials {

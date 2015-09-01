@@ -1,14 +1,17 @@
 <nav id="menu-overlay">
-	<button class="button-three" id="close-menu">Close Menu</button>
+	<button class="button-four" id="close-menu"><div class="row-inner">{% include icon-x.html %}Close Menu</div></button>
 	<ul>
     {% for page in site.nav-pages %}
     <li>
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.name }}</a>
+        <div class="row-inner">
+            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{% include {{ page.icon }} %}{{ page.name }}</a>
+            <div class="clear"></div>
+        </div>
     </li>
     {% endfor %}
 	</ul>
     <div class="social-wrap">
-        <div class="inner">
+        <div class="row-inner">
             {% for social in site.social-links %}
                 <a class="social" href="{{ social.url }}"><img src="{{ site.baseurl }}/images/social-{{ social.name }}.png"/></a>
             {% endfor %}
@@ -21,13 +24,13 @@
 <header class="site-header">
     <div class="row">
         
-        <div class="columns large-4 small-4">
+        <div class="columns large-4 medium-4 small-8">
             <a class="site-title" href="{{ site.baseurl }}/"><div class="mbmlogo"></div></a>
         </div>
 
-        <div class="columns large-8 small-8">
+        <div class="columns large-8 medium-8 small-4">
             
-            <div class="button-one" id="show-menu">MENU</div>
+            <div class="button-four hide-for-medium-up" id="show-menu">{% include icon-burger.html %} Menu</div>
             
             <div class="social-wrap hide-for-small-down">
                 <div class="inner">
@@ -51,13 +54,15 @@
 </header>
 
 <script>
+    
     $(document).ready(function(){
-       $('#show-menu').click(function(){
-           $('#menu-overlay').toggle('show');
-           $('#menu-overlay').fadeIn();
-       });
-       $('#close-menu').click(function(){
-           $('#menu-overlay').fadeToggle('show');
-       });
+        $('#show-menu').click(function(){
+            $('#menu-overlay').toggle();
+            $('body').toggleClass('no-scroll');
+        });
+        $('#close-menu').click(function(){
+           $('#menu-overlay').toggle();
+           $('body').toggleClass('no-scroll');
+        });
     });
 </script>

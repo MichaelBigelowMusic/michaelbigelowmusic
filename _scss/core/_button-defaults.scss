@@ -65,6 +65,45 @@
     }
 }
 
+.button-four {
+    color: $white;
+    background: $jellyBean;
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: .75rem 0;
+    display: block;
+    color: $white;
+    font-weight: 700;
+    font-size: 1rem;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    &:hover {
+        background: $jellyBeanDark;
+    }
+    .icon {
+        float: left;
+        svg {
+            width: .875rem;
+            height: .875rem;
+            fill: $white;
+            margin: .325rem 1.4325rem .325rem .25rem;
+            display: block;
+        }
+    }
+    &#show-menu {
+        padding: .875rem .5rem 1rem;
+        float: right;
+        max-width: 6rem;
+        margin-top: .5rem;
+        border-radius: 5px;
+        .icon svg {
+            margin-right: .75rem;
+        }
+    }   
+}
+
 .button-group {
     max-width: 25rem;
     .button-one, .button-two, .button-three {

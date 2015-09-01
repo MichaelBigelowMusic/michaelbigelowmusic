@@ -17,7 +17,7 @@ is_home: yes
     <ul class="row wide">
         <li class="columns medium-4">
             <div class="inner">
-                <span class="icon {{ page.feature_1_icon }} center"></span>
+                {% include {{ page.feature_1_icon }} %}
                 <h4 class="center">{{ page.feature_1_title }}</h4>
                 <p class="center">{{ page.feature_1_desc }}</p>
                 <a href="{{ page.feature_1_url }}" class="plain"><button class="button-two center">{{ page.feature_2_btn }}</button></a>
@@ -25,7 +25,7 @@ is_home: yes
         </li>
         <li class="columns medium-4">
             <div class="inner">
-                <span class="icon {{ page.feature_2_icon }} center"></span>
+                {% include {{ page.feature_2_icon }} %}
                 <h4 class="center">{{ page.feature_2_title }}</h4>
                 <p class="center">{{ page.feature_2_desc }}</p>
                 <a href="{{ page.feature_2_url }}" class="plain"><button class="button-two center">{{ page.feature_2_btn }}</button></a>
@@ -33,7 +33,7 @@ is_home: yes
         </li>
         <li class="columns medium-4">
             <div class="inner">
-                <span class="icon {{ page.feature_3_icon }} center"></span>
+                {% include {{ page.feature_3_icon }} %}
                 <h4 class="center">{{ page.feature_3_title }}</h4>
                 <p class="center">{{ page.feature_3_desc }}</p>
                 <a href="{{ page.feature_3_url }}" class="plain"><button class="button-two center">{{ page.feature_3_btn }}</button></a>
