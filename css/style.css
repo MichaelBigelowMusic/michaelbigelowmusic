@@ -5397,6 +5397,7 @@ a:visited { color: #4caf50; }
 .button-three:focus { color: #ffffff; text-decoration: none; background: #373737; }
 
 .button-four { color: #ffffff; background: #2d7cb3; width: 100%; border-radius: 0; text-align: left; padding: .75rem 0; display: block; color: #ffffff; font-weight: 700; font-size: 1rem; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; cursor: pointer; }
+.button-four:focus { outline: none; }
 .button-four:hover { background: #256693; }
 .button-four .icon { float: left; }
 .button-four .icon svg { width: .875rem; height: .875rem; fill: #ffffff; margin: .325rem 1.4325rem .325rem .25rem; display: block; }
@@ -5462,8 +5463,11 @@ a:visited { color: #205caa; }
 .site-header .mbmlogo { display: inline-block; }
 .site-header .columns { padding: 0; }
 .site-header .social-wrap .inner { float: right; }
+.site-header .site-nav { float: right; }
+.site-header .logo.full svg { width: 12rem; }
+.site-header .logo.icon-small svg { width: 11rem; height: 4rem; }
 
-.site-nav { display: block; float: right; }
+.site-nav { display: block; }
 .site-nav a { color: #313334; margin-left: .625rem; font-weight: 700; font-size: .875rem; }
 .site-nav a:hover { text-decoration: none; color: #2d7cb3; }
 
@@ -5480,8 +5484,13 @@ a:visited { color: #205caa; }
 #menu-overlay .row-inner { width: 100%; max-width: 290px; display: block; margin: 0 auto; }
 #menu-overlay .social { width: 50px; height: 50px; float: none; display: inline-block; }
 
-.site-footer { text-align: center; padding: 1rem 0; background: #ffffff; }
+.site-footer { text-align: center; padding: 1rem 0.9375rem 2rem; background: #ffffff; }
 .site-footer p { margin: 0; color: #7e7e7e; font-size: .875rem; }
+.site-footer .site-nav { margin: .5rem auto 0; padding-top: 1rem; border-top: 1px solid #ececec; display: block; float: none; }
+.site-footer .social-wrap { margin: 1rem 0 .5rem; }
+.site-footer .social { width: 35px; }
+.site-footer .logo.full svg { display: inline-block; width: 12rem; }
+.site-footer .logo.icon-small svg { display: inline-block; width: 11rem; height: 4rem; }
 
 /* ---------------------------------------------------------- Structure
 /* ----------------------------------------------------------*/
@@ -5578,6 +5587,8 @@ a.plain { text-decoration: none; }
 ----------------------------------------------------------*/
 @media screen and (min-width: 1024px) { .blocks ul.block-sections li:last-child { margin-bottom: 0; } }
 @media screen and (max-width: 1024px) { .testimonials.full p.quote { padding: 0; margin-top: 1.25rem; } }
+@media screen and (max-width: 750px) { .site-header { padding: .5rem 0.9375rem .25rem; }
+  .site-header .logo.full svg { width: 11rem; } }
 @media screen and (min-width: 640px) and (max-width: 1023px) { .testimonials.side ul { border: 0.0625rem solid #ececec; }
   .testimonials.side li { border: none; }
   .testimonials.side li:last-child { margin-top: 0rem; }
@@ -5587,7 +5598,7 @@ a.plain { text-decoration: none; }
   section { padding: 2rem 0 3.5rem; }
   .features li { min-height: 18rem; }
   .features .inner { position: relative; padding: 0 0 3.5rem; }
-  .site-header { padding: .75rem 0.5rem 1rem; }
+  .site-header { padding: .125rem 0.5rem .25rem; }
   .testimonials.full .inner { margin-bottom: .25rem; }
   .bio { padding: 4rem 0 3.5rem; }
   .bio .avatar { float: none; position: absolute; width: 6rem; right: 1rem; top: -6.5rem; }

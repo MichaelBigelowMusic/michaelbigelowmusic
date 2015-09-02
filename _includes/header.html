@@ -24,11 +24,14 @@
 <header class="site-header">
     <div class="row">
         
-        <div class="columns large-4 medium-4 small-8">
-            <a class="site-title" href="{{ site.baseurl }}/"><div class="mbmlogo"></div></a>
+        <div class="columns large-4 medium-3 small-8">
+            <a class="site-title" href="{{ site.baseurl }}/">
+                <span class="show-for-medium-up">{% include logo-full.html %}</span>
+                <span class="show-for-small-down">{% include logo-icon-sml.html %}</span>
+            </a>
         </div>
 
-        <div class="columns large-8 medium-8 small-4">
+        <div class="columns large-8 medium-9 small-4">
             
             <div class="button-four hide-for-medium-up" id="show-menu">{% include icon-burger.html %} Menu</div>
             

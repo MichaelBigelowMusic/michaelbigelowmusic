@@ -1,15 +1,33 @@
 <footer class="site-footer">
-    <div class="row wide">
-
-    <a class="site-title" href="{{ site.baseurl }}/"><div class="mbmlogo"></div></a>
-
-    <nav class="site-nav">
-        <div class="trigger">
-        {% for page in site.pages %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endfor %}
+    <div class="row">
+        
+        <div class="columns">
+            <a class="site-title" href="{{ site.baseurl }}/">
+                {% include logo-full.html %}
+            </a>
         </div>
-    </nav>
+
+        <div class="columns">
+        
+            <nav class="site-nav">
+                {% for page in site.nav-pages %}
+                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.name }}</a>
+                {% endfor %}
+                <div class="clear"></div>
+            </nav>
+            
+            <div class="social-wrap">
+                <div class="inner">
+                    {% for social in site.social-links %}
+                        <a class="social" href="{{ social.url }}"><img src="{{ site.baseurl }}/images/social-{{ social.name }}.png"/></a>
+                    {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+        </div>
+        
+        <div class="clear"></div>
 
     </div>
 </footer>

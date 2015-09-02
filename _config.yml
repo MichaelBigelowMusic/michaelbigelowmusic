@@ -22,12 +22,12 @@ social-links:
       url: http://www.googleplus.com/ 
 
 nav-pages: 
-    - name: Saxophones
+    - name: Performance
       url: /saxophones/
       icon: icon-saxophone.html
     - name: Composition & Arranging
       url: /composition-arranging/
       icon: icon-note.html
-    - name: Music Instruction
+    - name: Instruction
       url: /music-instruction/
       icon: icon-speech.html

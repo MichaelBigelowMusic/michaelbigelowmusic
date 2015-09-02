@@ -85,11 +85,20 @@ a:visited { color: #205caa; }
     .mbmlogo { display: inline-block; }
     .columns { padding: 0; }
     .social-wrap .inner { float: right; }
+    .site-nav { float: right; }
+    .logo {
+        &.full svg {
+            width: 12rem;
+        }
+        &.icon-small svg{
+            width: 11rem;
+            height: 4rem;
+        }
+    }
 }
 
 .site-nav {
     display: block;
-    float: right;
     a {
         color: $link--vary2;
         margin-left: .625rem;
@@ -184,12 +193,36 @@ a:visited { color: #205caa; }
 
 .site-footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 0.9375rem 2rem;
     background: $white;
     p {
         margin: 0;
         color: #7e7e7e;
         font-size: .875rem;
+    }
+    .site-nav {
+        margin: .5rem auto 0;
+        padding-top: 1rem;
+        border-top: 1px solid $border-gray--vary1;
+        display: block;
+        float: none;
+    }
+    .social-wrap {
+        margin: 1rem 0 .5rem;
+    }
+    .social {
+        width: 35px;
+    }
+    .logo {
+        &.full svg {
+            display: inline-block;
+            width: 12rem;
+        }
+        &.icon-small svg {
+            display: inline-block;
+            width: 11rem;
+            height: 4rem;
+        }
     }
 }
 
@@ -524,7 +557,12 @@ a {
 @media screen and (max-width: 750px) {
     
     .site-header {
-
+        padding: .5rem 0.9375rem .25rem;
+        .logo {
+            &.full svg{
+                width: 11rem;
+            }
+        }
     }
     
 }
@@ -567,7 +605,7 @@ a {
     }
     
     .site-header {
-        padding: .75rem 0.5rem 1rem;
+        padding: .125rem 0.5rem .25rem;
     }
     
     .testimonials {

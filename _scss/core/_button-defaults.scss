@@ -79,6 +79,9 @@
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
+    &:focus {
+        outline: none;
+    }
     &:hover {
         background: $jellyBeanDark;
     }
