@@ -11,15 +11,15 @@ permalink: pretty
 
 social-links:
     - name: facebook
-      url: http://www.facebook.com/
+      url: https://www.facebook.com/michaelbigelowmusic
     - name: soundcloud
-      url: http://www.soundcloud.com/
+      url: https://soundcloud.com/michaelbigelowmusic
     - name: youtube
-      url: http://www.youtube.com/ 
+      url: https://www.youtube.com/channel/UCywVyycVrct3mnQN8c30W3A
     - name: linkedin
-      url: http://www.linkedin.com/ 
+      url: https://www.linkedin.com/profile/view?id=ADEAAAMBUncBKYSPm9YeOL8QzSPlyhVMtVE9d3c
     - name: googleplus
-      url: http://www.googleplus.com/ 
+      url: https://plus.google.com/+MichaelBigelowMusic
 
 nav-pages: 
     - name: Performance

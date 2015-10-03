@@ -2,20 +2,13 @@
     <div class="row">
         
         <div class="columns">
-            <a class="site-title" href="{{ site.baseurl }}/">
+            <a class="site-title logo-wrap" href="{{ site.baseurl }}/">
                 {% include logo-full.html %}
             </a>
         </div>
 
         <div class="columns">
         
-            <nav class="site-nav">
-                {% for page in site.nav-pages %}
-                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.name }}</a>
-                {% endfor %}
-                <div class="clear"></div>
-            </nav>
-            
             <div class="social-wrap">
                 <div class="inner">
                     {% for social in site.social-links %}
@@ -24,6 +17,13 @@
                 </div>
                 <div class="clear"></div>
             </div>
+            
+            <nav class="site-nav">
+                {% for page in site.nav-pages %}
+                    <a class="page-link no-wrap" href="{{ page.url | prepend: site.baseurl }}">{{ page.name }}</a>
+                {% endfor %}
+                <div class="clear"></div>
+            </nav>
             
         </div>
         

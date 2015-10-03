@@ -9,6 +9,7 @@
     background: $button-green;
     border: .0625rem solid $button-green;
     padding: .875rem 2.875rem 1rem;
+    -webkit-font-smoothing:antialiased;
     &:hover {
         background: $button-green--dark;
         border: .0625rem solid $button-green--dark;
@@ -107,6 +108,7 @@
     }   
 }
 
+/*
 .button-group {
     max-width: 25rem;
     .button-one, .button-two, .button-three {
@@ -116,8 +118,10 @@
         padding-right: .25rem;
     }
 }
+*/
 
 @media screen and (max-width: 640px) {
+/*
     .button-group {
         max-width: 100%;
         .button-one, .button-two, .button-three {
@@ -125,4 +129,5 @@
             float: left;
         }
     }
+*/
 }

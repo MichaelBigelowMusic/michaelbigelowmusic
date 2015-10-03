@@ -47,13 +47,14 @@ testimonials:
 
 #========= Blurb Mini Section ===================
 
-blurb_icon: saxophone
+blurb_icon: icon-saxophone.html
 blurb_content: Currently studying at the University of Utah, Michael’s horn bellows from the state capitol to St. George.
 
 
 #========= Video Section ========================
 
-video_title: Recent Performance with The&nbsp;Blue&nbsp;OX
+video_title: Performing with The&nbsp;Blue&nbsp;OX
+video_description: It's always a blast performing with the Big Blue Ox, this show was lorem ipsum dolar sit amet lorem ipsum dolar.
 video_embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/yyY1oBg9iUA" frameborder="0" allowfullscreen></iframe>
 
 
@@ -71,4 +72,79 @@ contact_title: Contact
 
 
 ---
+
+<!--
+
+DEFAULT FORMSPREE
+
+<div class="modal form">
+<form action="//formspree.io/kbigelow5@gmail.com"
+      method="POST">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+</form>
+</div>
+-->
+
+
+<!--
+
+<div class="modal form" id="modal">
+<form>
+  <input name="name" type='text' placeholder='Your name (optional)'>
+  <input name="email" type="email" placeholder='Your email'>
+  <textarea type="text" name="message" placeholder='Your message'></textarea>
+  <button type='submit' class="button button-blue button-big mobile-block">Send message</button>
+</form>
+</div>
+
+<script>
+
+	var message = new Object();
+	message.loading = 'Loading...';
+	message.success = 'Thank you. Application received!';
+	message.failure = 'Whoops! There was a problem sending your message.';
+
+	var form = document.forms[0];
+
+	var statusMessage = document.createElement('div');
+	statusMessage.className = 'status';
+
+	// Set up the AJAX request
+	var request = new XMLHttpRequest();
+	request.open('POST', '//formspree.io/kbigelow5@gmail.com', true);
+	request.setRequestHeader('accept', 'application/json');
+
+	// Listen for the form being submitted
+	form.addEventListener('submit', function(evt) {
+	    evt.preventDefault();
+	    form.appendChild(statusMessage);
+
+	    // Create a new FormData object passing in the form's key value pairs (that was easy!)
+	    var formData = new FormData(form);
+
+	    // Send the formData
+	    request.send(formData);
+
+	    // Watch for changes to request.readyState and update the statusMessage accordingly
+	    request.onreadystatechange = function () {
+	        // <4 =  waiting on response from server
+	        if (request.readyState < 4)
+	            statusMessage.innerHTML = message.loading;
+	        // 4 = Response from server has been completely loaded.
+	        else if (request.readyState === 4) {
+	            // 200 - 299 = successful
+	            if (request.status == 200 && request.status < 300)
+	                statusMessage.innerHTML = message.success;
+	                
+	            else
+	                form.insertAdjacentHTML('beforeend', message.failure);
+	        }
+	    }
+	});
+
+
+</script>
+-->
 

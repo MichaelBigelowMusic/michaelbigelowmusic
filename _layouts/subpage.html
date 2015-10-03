@@ -52,7 +52,7 @@ layout: default
 <section class="blurb row">
     
     <div class="columns small-10 medium-9 large-8 small-centered">
-        <span class="icon {{ page.blurb_icon }}"></span>
+        {% include {{ page.blurb_icon }} %}
         <p>{{ page.blurb_content }}</p>
     </div>
 
@@ -62,12 +62,20 @@ layout: default
 <section class="video">
     
     <div class="row">
-        <div class="columns large-5 large-push-7">
+        <div class="columns large-5 large-push-7 large-uncentered medium-8 small-centered">
             <h3 class="white">{{ page.video_title }}</h3>
-            <script src="https://apis.google.com/js/platform.js"></script>
-            <div class="g-ytsubscribe" data-channel="Michael Bigelow Music" data-layout="default" data-count="hidden"></div>
+            <p class="white">{{ page.video_description }}</p>
+            <div class="youtube-subscribe-wrap hide-for-medium-down">
+                <script src="https://apis.google.com/js/platform.js"></script>
+                <div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="hidden"></div>
+            </div>
         </div>
-        <div class="columns large-7 large-pull-5"> {{ page.video_embed }} </div>
+        <div class="columns large-7 large-pull-5 large-uncentered medium-8 small-centered"> 
+            <div class="video-wrapper">
+                {{ page.video_embed }}
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
     
 </section>
@@ -82,10 +90,10 @@ layout: default
                 <p>{{ paragraph.content }}</p>
             {% endfor %}
         </div>
-        <div class="button-group">
-            <a href="" class="plain"><button class="button-one center push-top-bottom--sml">Book the Band</button></a>
-        </div>
+        <a href="" class="plain"><button class="button-one center push-top-bottom--sml">Book the Band</button></a>
     </div>
     
 </section>
+
+{{ content }}
 
