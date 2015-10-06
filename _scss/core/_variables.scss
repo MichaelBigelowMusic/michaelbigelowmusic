@@ -16,7 +16,6 @@
 /*  ----------------------------------------------------------*/
 
     // Neutrals
-    
     $white: #ffffff;
     $alabaster: #f9f9f9; //near white
     $gallery: #ececec; //light gray
@@ -33,11 +32,12 @@
     $outerspace: #313334;
     
     // Greeens
+    $pastelGreen: #7FED84;
     $fruitsalad: #4caf50;
     $apple: #42a146;
     
-    // Oranges
-
+    // Reds
+    $redOrange: #FF2C2C;
 
 /*  ----------------------------------------------------------
     Assignments
@@ -56,6 +56,7 @@
     // Buttons
     $button-green: $fruitsalad;
     $button-green--dark: $apple;
+    $button-green--bright: $pastelGreen;
     $button-blue: $jellyBean;
     $button-blue--dark: $jellyBeanDark;
     $button-gray--light: $gallery;

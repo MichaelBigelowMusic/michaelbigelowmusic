@@ -9,10 +9,16 @@
     background: $button-green;
     border: .0625rem solid $button-green;
     padding: .875rem 2.875rem 1rem;
+    border-radius: 5px;
     -webkit-font-smoothing:antialiased;
     &:hover {
         background: $button-green--dark;
         border: .0625rem solid $button-green--dark;
+    }
+}
+.banner {
+    .button-one {
+        border-color: $button-green--bright;
     }
 }
 
@@ -24,6 +30,7 @@
     background: $white;
     text-decoration: none;
     cursor: pointer;
+    border-radius: 5px;
     &:hover {
         background: $button-green;
         color: $white;
@@ -37,32 +44,33 @@
 }
 
 .button-three {
-    color: $white;
+    color: $gallery;
     margin: .25rem 0 0.125rem;
     display: block;
     text-decoration: none;
-    background: $mineshaft;
-    background: rgba(0,0,0,.8);
-    border: 1px solid #272727;
+    background: none;
+    border: none;
     padding: .5rem 1rem;
-    border-radius: 3px;
-    text-align: left;
-    -moz-transition: background .125s; /* Firefox */
-    -webkit-transition: background .125s; /* Safari 3.1 to 6.0 */
-    transition: background .125s;
-    -moz-transition-timing-function: ease-in-out;
-    -webkit-transition-timing-function: ease-in-out; /* Safari and Chrome */
-    transition-timing-function: ease-in-out; /* Firefox */
+    border-radius: 5px;
+    text-align: center;
+    .icon {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.125rem;
+        svg {
+            width: .875rem;
+            height: .875rem;
+            fill: $white;
+            margin: .325rem 1.4325rem .325rem .25rem;
+            display: block;
+        }
+    }
     &:hover {
         color: $white;
         text-decoration: none;
-        background: $mineshaftLight;
-        background: rgba(0,0,0,1);
     }
     &:focus {
-        color: $white;
-        text-decoration: none;
-        background: $mineshaftLight;
+        color: $gallery;
     }
 }
 
@@ -106,6 +114,29 @@
             margin-right: .75rem;
         }
     }   
+}
+.button-square {
+    &.red-text {
+        color: red;
+        background: $white;
+        .icon svg {
+            -webkit-transition: fill .25s ease-out .125s;
+            -moz-transition: fill .25s ease-out .125s;
+            -o-transition: fill .25s ease-out .125s;
+            transition: fill .25s ease-out .125s;
+            fill: #919191;
+        }
+        &:hover, :focus {
+            background: $white;
+            .icon svg {
+                fill: #CE1F1B;
+            }
+        }
+    }
+    .icon svg {
+        width: .875rem;
+        height: .875rem;
+    }
 }
 
 /*

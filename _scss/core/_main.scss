@@ -14,23 +14,23 @@
 ----------------------------------------------------------*/
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html, body { height: 100%; }
 
 body {
-  font-family: $noto;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  background-color: $background-light;
+    font-family: $noto;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: $background-light;
 }
 
 .page-content {
-  padding: 0;
-  background-color: #fff;
+    padding: 0;
+    background-color: #fff;
 }
 
 a         { color: #2a7ae2; text-decoration: none; }
@@ -43,15 +43,17 @@ a:visited { color: #205caa; }
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
 .wrap {
-  max-width: 800px;
-  padding: 0 30px;
-  margin: 0 auto;
-  zoom: 1;
+    max-width: 800px;
+    padding: 0 30px;
+    margin: 0 auto;
+    zoom: 1;
 }
 
 .clear { clear: both; }
 .no-scroll { overflow: hidden; }
 .no-wrap { white-space: nowrap; }
+.hidden { display: none; }
+.really-hidden { display: none !important; }
 
 
 /* ----------------------------------------------------------
@@ -72,6 +74,68 @@ a:visited { color: #205caa; }
     display: inline-block;
     margin-left: .25rem;
 }
+
+/* ----------------------------------------------------------
+    Modal
+/* ----------------------------------------------------------*/
+#modal, .modal-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#modal {
+    overflow: scroll;
+    background: rgba(0,0,0,.9);
+    z-index: 100;
+    padding: 1rem 1rem 5rem;
+}
+.modal-form {
+    background-color: $white;
+    margin: 1rem 0 1rem;
+    border-radius: 5px;
+    padding: .625rem 1rem 1.25rem;
+    .title {
+        border-bottom: .0625rem solid $border-gray--vary1;
+        padding-bottom: .25rem;
+        margin-bottom: .75rem;
+    }
+    h4 {
+        display: inline-block;
+        color: $jellyBean;
+        text-transform: none;
+        text-align: left;
+        font-size: 1.25rem;
+    }
+    .button-square {
+        display: block;
+        float: right;
+        padding: .625rem .5rem;
+        line-height: 0;
+    }
+    .button-one {
+        width: 100%;
+        padding: 1rem 2.875rem 1.25rem;
+    }
+}
+.alert {
+    padding: .5rem 1rem .75rem;
+    text-align: center;
+    &.sticky {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+.alert--success {
+    background: $fruitsalad;
+    color: $white;
+    display: none;
+}
+.red-text { color: $redOrange; }
+
 
 /* ----------------------------------------------------------
     Header & Footer
@@ -754,6 +818,10 @@ a {
             }
         }
     }
+    // Modal Form
+    .modal-form {
+        margin: .5rem 0 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -778,6 +846,20 @@ a {
     }
     .contact p, .contact a {
         font-size: 1.0625rem;
+    }
+    // Modal Form
+    #modal {
+        padding: 0;
+    }
+    .modal-form {
+        margin: 0;
+        border-radius: 0;
+        h4 {
+            font-size: 1.0625rem;
+        }
+    }
+    .button-three.modal-closer {
+        margin-top: 0;
     }
 }
 

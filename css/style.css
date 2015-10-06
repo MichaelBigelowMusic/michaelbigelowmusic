@@ -5385,16 +5385,20 @@ a:visited { color: #4caf50; }
 
 /* ---------------------------------------------------------- Button Styles
 /* ----------------------------------------------------------*/
-.button-one { color: #ffffff; font-weight: 700; line-height: 1.125; background: #4caf50; border: 0.0625rem solid #4caf50; padding: .875rem 2.875rem 1rem; -webkit-font-smoothing: antialiased; }
+.button-one { color: #ffffff; font-weight: 700; line-height: 1.125; background: #4caf50; border: 0.0625rem solid #4caf50; padding: .875rem 2.875rem 1rem; border-radius: 5px; -webkit-font-smoothing: antialiased; }
 .button-one:hover { background: #42a146; border: 0.0625rem solid #42a146; }
 
-.button-two { display: block; padding: .875rem 2.875rem 1rem; border: 0.0625rem solid #4caf50; color: #4caf50; background: #ffffff; text-decoration: none; cursor: pointer; }
+.banner .button-one { border-color: #7FED84; }
+
+.button-two { display: block; padding: .875rem 2.875rem 1rem; border: 0.0625rem solid #4caf50; color: #4caf50; background: #ffffff; text-decoration: none; cursor: pointer; border-radius: 5px; }
 .button-two:hover { background: #4caf50; color: #ffffff; text-decoration: none; }
 .button-two:focus { color: #4caf50; background: #ffffff; outline: none; }
 
-.button-three { color: #ffffff; margin: .25rem 0 0.125rem; display: block; text-decoration: none; background: #242424; background: rgba(0, 0, 0, 0.8); border: 1px solid #272727; padding: .5rem 1rem; border-radius: 3px; text-align: left; -moz-transition: background .125s; /* Firefox */ -webkit-transition: background .125s; /* Safari 3.1 to 6.0 */ transition: background .125s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; /* Safari and Chrome */ transition-timing-function: ease-in-out; /* Firefox */ }
-.button-three:hover { color: #ffffff; text-decoration: none; background: #373737; background: black; }
-.button-three:focus { color: #ffffff; text-decoration: none; background: #373737; }
+.button-three { color: #ececec; margin: .25rem 0 0.125rem; display: block; text-decoration: none; background: none; border: none; padding: .5rem 1rem; border-radius: 5px; text-align: center; }
+.button-three .icon { display: inline-block; width: 1.5rem; height: 1.125rem; }
+.button-three .icon svg { width: .875rem; height: .875rem; fill: #ffffff; margin: .325rem 1.4325rem .325rem .25rem; display: block; }
+.button-three:hover { color: #ffffff; text-decoration: none; }
+.button-three:focus { color: #ececec; }
 
 .button-four { color: #ffffff; background: #2d7cb3; width: 100%; border-radius: 0; text-align: left; padding: .75rem 0; display: block; color: #ffffff; font-weight: 700; font-size: 1rem; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; cursor: pointer; }
 .button-four:focus { outline: none; }
@@ -5403,6 +5407,12 @@ a:visited { color: #4caf50; }
 .button-four .icon svg { width: .875rem; height: .875rem; fill: #ffffff; margin: .325rem 1.4325rem .325rem .25rem; display: block; }
 .button-four#show-menu { padding: .875rem .5rem 1rem; float: right; max-width: 6rem; margin-top: .5rem; border-radius: 5px; }
 .button-four#show-menu .icon svg { margin-right: .75rem; }
+
+.button-square.red-text { color: red; background: #ffffff; }
+.button-square.red-text .icon svg { -webkit-transition: fill .25s ease-out .125s; -moz-transition: fill .25s ease-out .125s; -o-transition: fill .25s ease-out .125s; transition: fill .25s ease-out .125s; fill: #919191; }
+.button-square.red-text:hover, .button-square.red-text :focus { background: #ffffff; }
+.button-square.red-text:hover .icon svg, .button-square.red-text :focus .icon svg { fill: #CE1F1B; }
+.button-square .icon svg { width: .875rem; height: .875rem; }
 
 /*
 .button-group { max-width: 25rem; .button-one, .button-two, .button-three { width: 100%; margin: .25rem 0; padding-left: .25rem; padding-right: .25rem; }
@@ -5454,11 +5464,34 @@ a:visited { color: #205caa; }
 
 .no-wrap { white-space: nowrap; }
 
+.hidden { display: none; }
+
+.really-hidden { display: none !important; }
+
 /* ---------------------------------------------------------- Various Elements
 /* ----------------------------------------------------------*/
 .social-wrap { display: block; width: 100%; margin: .125rem 0 .5rem; }
 
 .social { width: 30px; height: 30px; display: inline-block; margin-left: .25rem; }
+
+/* ---------------------------------------------------------- Modal
+/* ----------------------------------------------------------*/
+#modal, .modal-bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
+
+#modal { overflow: scroll; background: rgba(0, 0, 0, 0.9); z-index: 100; padding: 1rem 1rem 5rem; }
+
+.modal-form { background-color: #ffffff; margin: 1rem 0 1rem; border-radius: 5px; padding: .625rem 1rem 1.25rem; }
+.modal-form .title { border-bottom: 0.0625rem solid #ececec; padding-bottom: .25rem; margin-bottom: .75rem; }
+.modal-form h4 { display: inline-block; color: #2d7cb3; text-transform: none; text-align: left; font-size: 1.25rem; }
+.modal-form .button-square { display: block; float: right; padding: .625rem .5rem; line-height: 0; }
+.modal-form .button-one { width: 100%; padding: 1rem 2.875rem 1.25rem; }
+
+.alert { padding: .5rem 1rem .75rem; text-align: center; }
+.alert.sticky { position: fixed; top: 0; right: 0; left: 0; }
+
+.alert--success { background: #4caf50; color: #ffffff; display: none; }
+
+.red-text { color: #FF2C2C; }
 
 /* ---------------------------------------------------------- Header & Footer
 /* ----------------------------------------------------------*/
@@ -5633,12 +5666,17 @@ a.plain { text-decoration: none; }
   .site-footer .social-wrap { margin-bottom: 1rem; }
   .site-footer .site-nav { border: none; }
   .site-footer .site-nav a { width: 100%; display: block; margin-bottom: .25rem; padding: .875rem 0 1rem; margin-left: 0; background: #2d7cb3; border-radius: 3px; color: #fff; -webkit-font-smoothing: antialiased; font-size: 1rem; cursor: pointer; text-decoration: none; }
-  .site-footer .site-nav a:hover, .site-footer .site-nav a :focus { background: #256693; } }
+  .site-footer .site-nav a:hover, .site-footer .site-nav a :focus { background: #256693; }
+  .modal-form { margin: .5rem 0 0; } }
 @media screen and (max-width: 480px) { .splashpage { height: auto; min-height: 0; }
   .splashpage .inner { position: relative; margin: 4rem 0 6rem; }
   .blurb .icon { position: relative; margin: 0 auto 1rem; display: block; }
   .blurb p { padding-left: 0; }
-  .contact p, .contact a { font-size: 1.0625rem; } }
+  .contact p, .contact a { font-size: 1.0625rem; }
+  #modal { padding: 0; }
+  .modal-form { margin: 0; border-radius: 0; }
+  .modal-form h4 { font-size: 1.0625rem; }
+  .button-three.modal-closer { margin-top: 0; } }
 @media screen and (max-width: 400px) { .banner h1 { font-size: 1.5rem; }
   .banner h2.understated { font-size: 1rem; }
   .banner.home { min-height: 450px; }
