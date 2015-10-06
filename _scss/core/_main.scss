@@ -102,10 +102,9 @@ a:visited { color: #205caa; }
         margin-bottom: .75rem;
     }
     h4 {
-        display: inline-block;
         color: $jellyBean;
         text-transform: none;
-        text-align: left;
+        text-align: center;
         font-size: 1.25rem;
     }
     .button-square {
@@ -856,6 +855,7 @@ a {
         border-radius: 0;
         h4 {
             font-size: 1.0625rem;
+            text-align: left;
         }
     }
     .button-three.modal-closer {

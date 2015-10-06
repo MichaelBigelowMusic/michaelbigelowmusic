@@ -4,6 +4,7 @@
 
 .button-one {
     color: $white;
+    cursor: pointer;
     font-weight: 700;
     line-height: 1.125;
     background: $button-green;
@@ -20,6 +21,13 @@
     .button-one {
         border-color: $button-green--bright;
     }
+}
+input.button-one {
+    border-radius: 5px;
+    -webkit-transition: background .25s;
+    -moz-transition: background .25s;
+    -o-transition: background .25s;
+    transition: background .25s;
 }
 
 .button-two {

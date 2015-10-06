@@ -5385,10 +5385,12 @@ a:visited { color: #4caf50; }
 
 /* ---------------------------------------------------------- Button Styles
 /* ----------------------------------------------------------*/
-.button-one { color: #ffffff; font-weight: 700; line-height: 1.125; background: #4caf50; border: 0.0625rem solid #4caf50; padding: .875rem 2.875rem 1rem; border-radius: 5px; -webkit-font-smoothing: antialiased; }
+.button-one { color: #ffffff; cursor: pointer; font-weight: 700; line-height: 1.125; background: #4caf50; border: 0.0625rem solid #4caf50; padding: .875rem 2.875rem 1rem; border-radius: 5px; -webkit-font-smoothing: antialiased; }
 .button-one:hover { background: #42a146; border: 0.0625rem solid #42a146; }
 
 .banner .button-one { border-color: #7FED84; }
+
+input.button-one { border-radius: 5px; -webkit-transition: background .25s; -moz-transition: background .25s; -o-transition: background .25s; transition: background .25s; }
 
 .button-two { display: block; padding: .875rem 2.875rem 1rem; border: 0.0625rem solid #4caf50; color: #4caf50; background: #ffffff; text-decoration: none; cursor: pointer; border-radius: 5px; }
 .button-two:hover { background: #4caf50; color: #ffffff; text-decoration: none; }
@@ -5482,7 +5484,7 @@ a:visited { color: #205caa; }
 
 .modal-form { background-color: #ffffff; margin: 1rem 0 1rem; border-radius: 5px; padding: .625rem 1rem 1.25rem; }
 .modal-form .title { border-bottom: 0.0625rem solid #ececec; padding-bottom: .25rem; margin-bottom: .75rem; }
-.modal-form h4 { display: inline-block; color: #2d7cb3; text-transform: none; text-align: left; font-size: 1.25rem; }
+.modal-form h4 { color: #2d7cb3; text-transform: none; text-align: center; font-size: 1.25rem; }
 .modal-form .button-square { display: block; float: right; padding: .625rem .5rem; line-height: 0; }
 .modal-form .button-one { width: 100%; padding: 1rem 2.875rem 1.25rem; }
 
@@ -5675,7 +5677,7 @@ a.plain { text-decoration: none; }
   .contact p, .contact a { font-size: 1.0625rem; }
   #modal { padding: 0; }
   .modal-form { margin: 0; border-radius: 0; }
-  .modal-form h4 { font-size: 1.0625rem; }
+  .modal-form h4 { font-size: 1.0625rem; text-align: left; }
   .button-three.modal-closer { margin-top: 0; } }
 @media screen and (max-width: 400px) { .banner h1 { font-size: 1.5rem; }
   .banner h2.understated { font-size: 1rem; }
