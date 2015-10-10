@@ -12,7 +12,7 @@
     padding: .875rem 2.875rem 1rem;
     border-radius: 5px;
     -webkit-font-smoothing:antialiased;
-    &:hover {
+    &:hover, :focus {
         background: $button-green--dark;
         border: .0625rem solid $button-green--dark;
     }
@@ -20,6 +20,7 @@
 .banner {
     .button-one {
         border-color: $button-green--bright;
+        &:focus { background: $button-green--dark; }
     }
 }
 input.button-one {

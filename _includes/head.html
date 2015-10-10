@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/images/favicon.ico?">
     
     <!-- Load Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -17,7 +18,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/js/smoothscroll.js"></script>
-    <script type="text/javascript" src="/js/hide-show.js"></script>
-        
+    <script type="text/javascript" src="/js/interactive-elements.js"></script>
+    
+    {% include modal-form.html %}
 
 </head>

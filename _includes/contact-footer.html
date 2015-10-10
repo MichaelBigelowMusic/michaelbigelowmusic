@@ -3,6 +3,7 @@
     {{ content }}
     
     <!-- Contact Form -->
+<!--
     <section class="contact">
         <div class="row">
             <div class="columns large-8 small-10 small-centered">
@@ -11,6 +12,64 @@
                 <p class="right">801.550.3951</p>
                 <span class="clear"></span>
             </div>
+        </div>
+    </section>
+-->
+    <section class="contact-full">
+        <div class="row">
+            <div class="columns medium-7 small-12">
+                <h3>{{ page.contact_title }}</h3>
+                <p>mb@michaelbigelowmusic.com<br/>801.550.3951</p>
+            </div>
+            
+            <div class="large-5 medium-5 columns">
+                <form id="contact-form" class="contact-form" action="//formspree.io/kbigelow5@gmail.com" method="post">
+                    <div class="title">
+                        <h4>Send a Message</h4>
+                        <div class="clear"></div>
+                    </div>
+                    <label for="Name">Your Name</label>
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <label for="Email">Your Email</label>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <label for="Message" id="#label-message">Message</label>
+                    <textarea name="Message" cols="30" rows="4" required></textarea>
+                    <!-- CONFIG -->
+                    <input class="really-hidden" type="text" name="_gotcha">
+                    <input type="hidden" name="_subject" value="Subject">
+                    <!-- /CONFIG -->
+                    <input class="submit button-one" type="submit" value="Send Message &rsaquo;">
+                </form>
+            </div>
+            
+            <script>
+            var $contactForm = $('#contact-form');
+            var $body = $('body');
+            var $successMessage = $('<div class="alert alert--success sticky "><div class="row">Message sent to Michael!</div></div>');
+            $contactForm.submit(function(e) {
+            	e.preventDefault();
+            	$.ajax({
+            		url: '//formspree.io/kbigelow5@gmail.com',
+            		method: 'POST',
+            		data: $(this).serialize(),
+            		dataType: 'json',
+            		beforeSend: function() {
+            			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+            		},
+            		success: function(data) {
+            			$contactForm.find('.alert--loading').hide();
+                        $body.append($successMessage);
+                        $successMessage.delay(500).slideToggle(500).delay(5000).slideToggle(500);
+                        
+            		},
+            		error: function(err) {
+            			$contactForm.find('.alert--loading').hide();
+            			$contactForm.append('<div class="alert alert--error"><span class="red-text">Oops, there was an error!</span><br/>Email me at mb@michaelbigelowmusic.com</div>');
+            		}
+            	});
+            });
+            </script>
+
         </div>
     </section>
 </div>

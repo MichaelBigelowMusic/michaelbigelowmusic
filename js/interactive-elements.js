@@ -19,18 +19,16 @@ $(document).ready(function(){
 // Main Form Opener
 $(document).ready(function(){
     $('.modal-opener').click(function(){
-        $('#modal').slideToggle();
+        $('#modal').toggle();
+        $('#modal-bg').fadeToggle();
+        $('.modal-form').delay(100).slideToggle();
         $('body').toggleClass('no-scroll');
     });
     $('.modal-closer').click(function(){
-       $('#modal').slideToggle();
-       $('body').toggleClass('no-scroll');
+        $('#modal').fadeToggle();
+        $('#modal-bg').fadeToggle();
+        $('.modal-form').delay(100).slideToggle();
+        $('body').toggleClass('no-scroll');
     });
 });
 
-// Success Alert Closer
-$(document).ready(function(){
-    $('#alert--success-closer').click(function(){
-        $('.alert--success').toggle();
-    });
-});

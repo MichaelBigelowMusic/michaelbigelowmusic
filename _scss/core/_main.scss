@@ -54,6 +54,8 @@ a:visited { color: #205caa; }
 .no-wrap { white-space: nowrap; }
 .hidden { display: none; }
 .really-hidden { display: none !important; }
+.red-text { color: $redOrange; }
+.green-text { color: $fruitsalad; }
 
 
 /* ----------------------------------------------------------
@@ -74,67 +76,6 @@ a:visited { color: #205caa; }
     display: inline-block;
     margin-left: .25rem;
 }
-
-/* ----------------------------------------------------------
-    Modal
-/* ----------------------------------------------------------*/
-#modal, .modal-bg {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-#modal {
-    overflow: scroll;
-    background: rgba(0,0,0,.9);
-    z-index: 100;
-    padding: 1rem 1rem 5rem;
-}
-.modal-form {
-    background-color: $white;
-    margin: 1rem 0 1rem;
-    border-radius: 5px;
-    padding: .625rem 1rem 1.25rem;
-    .title {
-        border-bottom: .0625rem solid $border-gray--vary1;
-        padding-bottom: .25rem;
-        margin-bottom: .75rem;
-    }
-    h4 {
-        color: $jellyBean;
-        text-transform: none;
-        text-align: center;
-        font-size: 1.25rem;
-    }
-    .button-square {
-        display: block;
-        float: right;
-        padding: .625rem .5rem;
-        line-height: 0;
-    }
-    .button-one {
-        width: 100%;
-        padding: 1rem 2.875rem 1.25rem;
-    }
-}
-.alert {
-    padding: .5rem 1rem .75rem;
-    text-align: center;
-    &.sticky {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-    }
-}
-.alert--success {
-    background: $fruitsalad;
-    color: $white;
-    display: none;
-}
-.red-text { color: $redOrange; }
-
 
 /* ----------------------------------------------------------
     Header & Footer
@@ -276,7 +217,7 @@ a:visited { color: #205caa; }
         display: inline-block;
     }
     .social-wrap {
-        margin: 1rem 0 .5rem;
+        margin: .75rem 0 .875rem;
     }
     .social {
         width: 35px;
@@ -291,6 +232,149 @@ a:visited { color: #205caa; }
             width: 11rem;
             height: 4rem;
         }
+    }
+}
+
+/* ----------------------------------------------------------
+    Contact Form
+/* ----------------------------------------------------------*/
+
+// Modal
+#modal, #modal-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#modal-bg {
+    background: rgba(0,0,0,.9);
+    display: none;
+}
+#modal {
+    overflow: scroll;
+    z-index: 100;
+    padding: 1rem 1rem 5rem;
+}
+.modal-form {
+    display: none;
+}
+// General Contact Form
+.contact-form {
+    background-color: $white;
+    margin: 1rem 0 1rem;
+    border-radius: 5px;
+    padding: .625rem 1rem 1.25rem;
+    .title {
+        border-bottom: .0625rem solid $border-gray--vary1;
+        padding-bottom: .25rem;
+        margin-bottom: .75rem;
+    }
+    h4 {
+        color: $jellyBean;
+        text-transform: none;
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.125;
+    }
+    .button-square {
+        display: block;
+        float: right;
+        padding: .625rem .5rem;
+        line-height: 0;
+    }
+    .button-one {
+        width: 100%;
+        padding: 1rem 2.875rem 1.25rem;
+    }
+}
+.alert {
+    padding: .5rem 1rem .75rem;
+    text-align: center;
+    &.sticky {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+.alert--success {
+    background: $fruitsalad;
+    color: $white;
+    display: none;
+}
+
+.contact-full, .contact {
+    // Typesetting
+    h3, p, a {
+        text-align: right;
+        color: $white;
+        width: 100%;
+        display: block;
+    }
+    h3 {
+        margin: 1.25rem 0 .5rem 0;
+        padding: 0;
+    }
+    p, a {
+        font-size: 1.375rem;
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+    }    
+}
+
+.contact-full {
+    background: url('../../images/stressed_linen.png') $mineshaft repeat;
+}
+
+.contact {
+    
+    // Structure
+    background: url('../../images/bg_mbSax3_lrg.jpg') $mineshaft;
+    background-size: cover;
+    height: 20rem;
+    padding: 5rem 0;
+    ul.social {
+        margin: .75rem 0 1.25rem;
+        list-style: none;
+        li { display: inline-block; }
+        img { margin-right: .25rem; }
+    }
+    form {
+        background: $white;
+        border-radius: .3125rem;
+        padding: .875rem;
+        max-width: 17rem;
+        margin-top: 1.375rem;
+    }
+    .element-wrap {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    // Elements
+    .button-one {
+        width: 100%;
+        margin-top: .25rem;
+    }
+    .button-three {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    // Typesetting
+    h3 {
+        border-bottom: #434343 solid .0625rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.25rem;
+    }
+    p, a {
+        font-size: 1.375rem;
+        font-style: italic;
     }
 }
 
@@ -318,7 +402,7 @@ section { padding: 3rem 0 4.5rem; }
         .title { text-align: center; }
     }
     &.sax {
-        background: url('../../images/bg_mbSax2_med.jpg') $black no-repeat center center;
+        background: url('../../images/bg_mbSax2_sml.jpg') $black no-repeat right center;
         background-position: center;
     }
 
@@ -347,7 +431,7 @@ section { padding: 3rem 0 4.5rem; }
     }
     
     .button-two {
-        padding: .875rem .75rem 1rem;
+        padding: .75rem .75rem .875rem;
         width: 100%;
         max-width: 11rem;
     }
@@ -412,61 +496,6 @@ section { padding: 3rem 0 4.5rem; }
         padding-bottom: 0;
     }
 
-}
-
-.contact {
-    
-    // Structure
-    background: url('../../images/stressed_linen.png') $mineshaft repeat;
-    height: 20rem;
-    padding: 5rem 0;
-    ul.social {
-        margin: .75rem 0 1.25rem;
-        list-style: none;
-        li { display: inline-block; }
-        img { margin-right: .25rem; }
-    }
-    form {
-        background: $white;
-        border-radius: .3125rem;
-        padding: .875rem;
-        max-width: 17rem;
-        margin-top: 1.375rem;
-    }
-    .element-wrap {
-        display: inline-block;
-        width: 100%;
-    }
-    
-    // Elements
-    .button-one {
-        width: 100%;
-        margin-top: .25rem;
-    }
-    .button-three {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-//         max-width: 275px;
-        width: 100%;
-        text-align: center;
-    }
-
-    
-    // Typesetting
-    h3 {
-        padding-bottom: 1rem;
-        margin-bottom: 1.25rem;
-        color: $white;
-        border-bottom: #434343 solid .0625rem;
-    }
-    p, a {
-        font-size: 1.375rem;
-        font-style: italic;
-        color: $white;
-        text-decoration: none;
-        -webkit-font-smoothing: antialiased;
-    }
 }
 
 .group-feature {
@@ -710,13 +739,23 @@ a {
     section { padding: 2rem 0 3.5rem; }
     
     .features {
+        padding: 2.5rem 0 3rem;
         li { 
-            min-height: 18rem;
+            min-height: 0;
             border: none;
         }
         .inner {
             position: relative;
-            padding: 0 0 3.5rem;
+            padding: 0 0 3.5rem 3.5rem;
+        }
+        h4, p { text-align: left; }
+        h4 { margin: 1rem 0 .25rem; }
+        p { margin-bottom: .75rem; }
+        .button-two { float: left; }
+        .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     }
     
@@ -724,7 +763,16 @@ a {
         padding: .125rem 0.5rem .25rem;
     }
     .banner {
-        &.sub { padding: 2rem 0; }
+        &.sub {
+            padding: 2rem 0;
+            h1, h2.understated {
+                text-align: left;
+                max-width: 21rem;
+            }
+            .button-one {
+                float: left;
+            }
+        }
         &.home {
             h1, h2.understated {
                 padding-right: 30%
@@ -736,7 +784,6 @@ a {
             .inner { margin-bottom: .25rem; }
         }
     }
-    
     .bio {
         padding: 4rem 0 3.5rem;
         .avatar {
@@ -747,9 +794,8 @@ a {
             top: -6.5rem;
         }
     }
-    
     .contact {
-        
+
         // Structure
         padding: 2rem 0 3rem;
         height: 15rem;
@@ -794,6 +840,7 @@ a {
         }
     }
     .site-footer {
+        padding: 1rem 0 2rem;
         .social { width: 45px; }
         .social-wrap { margin-bottom: 1rem; }
         .site-nav {
@@ -820,6 +867,20 @@ a {
     // Modal Form
     .modal-form {
         margin: .5rem 0 0;
+    }
+    // Contact Footer
+    .contact-full, .contact {
+        h3 {
+            margin: 0 0 .5rem 0;
+            padding-bottom: .5rem;
+            border-bottom: .0625rem solid rgba(255,255,255,.25);
+        }
+        h3, a, p {
+            text-align: center;
+        }
+        a, p {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -865,13 +926,17 @@ a {
 
 @media screen and (max-width: 400px) {
     .banner {
-        h1 { font-size: 1.5rem; }
-        h2.understated { font-size: 1rem; }
+        h1 { text-shadow: 1px 1px $black; }
+        h2.understated {
+            font-size: 1rem;
+            text-shadow: 1px 1px $black;
+        }
         &.home {
-            min-height: 450px;
+            min-height: 380px;
             h1 {
                 margin-top: 0;
                 padding-right: 0;
+                font-size: 1.5rem;
             }
             h2.understated {
                 max-width: 190px;
@@ -895,6 +960,9 @@ a {
         &.home {
             background: url('../../images/bg_mbSax1_med.jpg') $black no-repeat right bottom;
         }
+        &.sax {
+            background: url('../../images/bg_mbSax2_med.jpg') $black no-repeat center center;
+        }
     }
 }
 @media screen and (min-width: 641px) {
@@ -902,5 +970,16 @@ a {
         &.home {
             background: url('../../images/bg_mbSax1_lrg.jpg') $black no-repeat center -40px;
         }
+        &.sax {
+            background: url('../../images/bg_mbSax2_lrg.jpg') $black no-repeat center center;
+        }
+    }
+    .contact-full {
+        background: url('../../images/bg_mbSax3_med.jpg') $black no-repeat center center;
+    }
+}
+@media screen and (min-width: 960px) {
+    .contact-full {
+        background: url('../../images/bg_mbSax3_lrg.jpg') $black no-repeat center center;
     }
 }

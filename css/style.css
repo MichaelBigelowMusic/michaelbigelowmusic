@@ -5371,7 +5371,7 @@ h1.white, h2.white, h3.white, h4.white, h5.white, h6.white, p.white { color: #ff
 
 h1 { font-family: "Bitter", Georgia, serif; font-size: 2.1875rem; line-height: 1.25; font-weight: 400; margin: .5rem 0; }
 
-h2.understated { font-size: 1.125rem; line-height: 1.4375; }
+h2.understated { font-size: 1.125rem; line-height: 1.25; }
 
 h3 { font-family: "Bitter", Georgia, serif; font-size: 1.75rem; font-weight: 400; padding-bottom: 2.5rem; }
 
@@ -5386,9 +5386,10 @@ a:visited { color: #4caf50; }
 /* ---------------------------------------------------------- Button Styles
 /* ----------------------------------------------------------*/
 .button-one { color: #ffffff; cursor: pointer; font-weight: 700; line-height: 1.125; background: #4caf50; border: 0.0625rem solid #4caf50; padding: .875rem 2.875rem 1rem; border-radius: 5px; -webkit-font-smoothing: antialiased; }
-.button-one:hover { background: #42a146; border: 0.0625rem solid #42a146; }
+.button-one:hover, .button-one :focus { background: #42a146; border: 0.0625rem solid #42a146; }
 
 .banner .button-one { border-color: #7FED84; }
+.banner .button-one:focus { background: #42a146; }
 
 input.button-one { border-radius: 5px; -webkit-transition: background .25s; -moz-transition: background .25s; -o-transition: background .25s; transition: background .25s; }
 
@@ -5470,30 +5471,15 @@ a:visited { color: #205caa; }
 
 .really-hidden { display: none !important; }
 
+.red-text { color: #FF2C2C; }
+
+.green-text { color: #4caf50; }
+
 /* ---------------------------------------------------------- Various Elements
 /* ----------------------------------------------------------*/
 .social-wrap { display: block; width: 100%; margin: .125rem 0 .5rem; }
 
 .social { width: 30px; height: 30px; display: inline-block; margin-left: .25rem; }
-
-/* ---------------------------------------------------------- Modal
-/* ----------------------------------------------------------*/
-#modal, .modal-bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
-
-#modal { overflow: scroll; background: rgba(0, 0, 0, 0.9); z-index: 100; padding: 1rem 1rem 5rem; }
-
-.modal-form { background-color: #ffffff; margin: 1rem 0 1rem; border-radius: 5px; padding: .625rem 1rem 1.25rem; }
-.modal-form .title { border-bottom: 0.0625rem solid #ececec; padding-bottom: .25rem; margin-bottom: .75rem; }
-.modal-form h4 { color: #2d7cb3; text-transform: none; text-align: center; font-size: 1.25rem; }
-.modal-form .button-square { display: block; float: right; padding: .625rem .5rem; line-height: 0; }
-.modal-form .button-one { width: 100%; padding: 1rem 2.875rem 1.25rem; }
-
-.alert { padding: .5rem 1rem .75rem; text-align: center; }
-.alert.sticky { position: fixed; top: 0; right: 0; left: 0; }
-
-.alert--success { background: #4caf50; color: #ffffff; display: none; }
-
-.red-text { color: #FF2C2C; }
 
 /* ---------------------------------------------------------- Header & Footer
 /* ----------------------------------------------------------*/
@@ -5526,10 +5512,48 @@ a:visited { color: #205caa; }
 .site-footer p { margin: 0; color: #7e7e7e; font-size: .875rem; }
 .site-footer .site-nav { margin: .5rem auto 0; padding-top: 1rem; display: block; float: none; }
 .site-footer .logo-wrap { display: inline-block; }
-.site-footer .social-wrap { margin: 1rem 0 .5rem; }
+.site-footer .social-wrap { margin: .75rem 0 .875rem; }
 .site-footer .social { width: 35px; }
 .site-footer .logo.full svg { display: inline-block; width: 12rem; }
 .site-footer .logo.icon-small svg { display: inline-block; width: 11rem; height: 4rem; }
+
+/* ---------------------------------------------------------- Contact Form
+/* ----------------------------------------------------------*/
+#modal, #modal-bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
+
+#modal-bg { background: rgba(0, 0, 0, 0.9); display: none; }
+
+#modal { overflow: scroll; z-index: 100; padding: 1rem 1rem 5rem; }
+
+.modal-form { display: none; }
+
+.contact-form { background-color: #ffffff; margin: 1rem 0 1rem; border-radius: 5px; padding: .625rem 1rem 1.25rem; }
+.contact-form .title { border-bottom: 0.0625rem solid #ececec; padding-bottom: .25rem; margin-bottom: .75rem; }
+.contact-form h4 { color: #2d7cb3; text-transform: none; text-align: center; font-size: 1.25rem; line-height: 1.125; }
+.contact-form .button-square { display: block; float: right; padding: .625rem .5rem; line-height: 0; }
+.contact-form .button-one { width: 100%; padding: 1rem 2.875rem 1.25rem; }
+
+.alert { padding: .5rem 1rem .75rem; text-align: center; }
+.alert.sticky { position: fixed; top: 0; right: 0; left: 0; }
+
+.alert--success { background: #4caf50; color: #ffffff; display: none; }
+
+.contact-full h3, .contact-full p, .contact-full a, .contact h3, .contact p, .contact a { text-align: right; color: #ffffff; width: 100%; display: block; }
+.contact-full h3, .contact h3 { margin: 1.25rem 0 .5rem 0; padding: 0; }
+.contact-full p, .contact-full a, .contact p, .contact a { font-size: 1.375rem; text-decoration: none; -webkit-font-smoothing: antialiased; }
+
+.contact-full { background: url("../../images/stressed_linen.png") #242424 repeat; }
+
+.contact { background: url("../../images/bg_mbSax3_lrg.jpg") #242424; background-size: cover; height: 20rem; padding: 5rem 0; }
+.contact ul.social { margin: .75rem 0 1.25rem; list-style: none; }
+.contact ul.social li { display: inline-block; }
+.contact ul.social img { margin-right: .25rem; }
+.contact form { background: #ffffff; border-radius: .3125rem; padding: .875rem; max-width: 17rem; margin-top: 1.375rem; }
+.contact .element-wrap { display: inline-block; width: 100%; }
+.contact .button-one { width: 100%; margin-top: .25rem; }
+.contact .button-three { width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; width: 100%; text-align: center; }
+.contact h3 { border-bottom: #434343 solid .0625rem; padding-bottom: 1rem; margin-bottom: 1.25rem; }
+.contact p, .contact a { font-size: 1.375rem; font-style: italic; }
 
 /* ---------------------------------------------------------- Structure
 /* ----------------------------------------------------------*/
@@ -5539,13 +5563,13 @@ section { padding: 3rem 0 4.5rem; }
 .banner.home { background: url("../../images/bg_mbSax1_sml.jpg") #000000 no-repeat right bottom; }
 .banner.sub { padding: 3.25rem 0 4rem; min-height: 290px; }
 .banner.sub .title { text-align: center; }
-.banner.sax { background: url("../../images/bg_mbSax2_med.jpg") #000000 no-repeat center center; background-position: center; }
+.banner.sax { background: url("../../images/bg_mbSax2_sml.jpg") #000000 no-repeat right center; background-position: center; }
 
 .features { padding: 3rem 0 3rem; }
 .features li { list-style: none; margin: 0; min-height: 22rem; border-left: solid 1px #c7c7c7; position: relative; display: block; }
 .features li:first-child { border: none; }
 .features .inner { padding: 2rem 1rem; position: absolute; bottom: 0; left: 0; right: 0; padding: 0 1rem 3.5rem; }
-.features .button-two { padding: .875rem .75rem 1rem; width: 100%; max-width: 11rem; }
+.features .button-two { padding: .75rem .75rem .875rem; width: 100%; max-width: 11rem; }
 .features h4 { margin: 1.1875rem 0 .75rem; }
 .features p { margin-bottom: 1.5rem; }
 
@@ -5565,17 +5589,6 @@ section { padding: 3rem 0 4.5rem; }
 
 .bio .avatar { float: right; }
 .bio h3 { margin-bottom: 1rem; padding-bottom: 0; }
-
-.contact { background: url("../../images/stressed_linen.png") #242424 repeat; height: 20rem; padding: 5rem 0; }
-.contact ul.social { margin: .75rem 0 1.25rem; list-style: none; }
-.contact ul.social li { display: inline-block; }
-.contact ul.social img { margin-right: .25rem; }
-.contact form { background: #ffffff; border-radius: .3125rem; padding: .875rem; max-width: 17rem; margin-top: 1.375rem; }
-.contact .element-wrap { display: inline-block; width: 100%; }
-.contact .button-one { width: 100%; margin-top: .25rem; }
-.contact .button-three { width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; width: 100%; text-align: center; }
-.contact h3 { padding-bottom: 1rem; margin-bottom: 1.25rem; color: #ffffff; border-bottom: #434343 solid .0625rem; }
-.contact p, .contact a { font-size: 1.375rem; font-style: italic; color: #ffffff; text-decoration: none; -webkit-font-smoothing: antialiased; }
 
 .group-feature .members { border-left: 1px solid #ececec; }
 .group-feature li { margin-bottom: 2rem; }
@@ -5647,10 +5660,18 @@ a.plain { text-decoration: none; }
 @media screen and (max-width: 640px) { h1 { font-size: 1.75rem; }
   h3 { padding-bottom: 1.5rem; }
   section { padding: 2rem 0 3.5rem; }
-  .features li { min-height: 18rem; border: none; }
-  .features .inner { position: relative; padding: 0 0 3.5rem; }
+  .features { padding: 2.5rem 0 3rem; }
+  .features li { min-height: 0; border: none; }
+  .features .inner { position: relative; padding: 0 0 3.5rem 3.5rem; }
+  .features h4, .features p { text-align: left; }
+  .features h4 { margin: 1rem 0 .25rem; }
+  .features p { margin-bottom: .75rem; }
+  .features .button-two { float: left; }
+  .features .icon { position: absolute; left: 0; top: 0; }
   .site-header { padding: .125rem 0.5rem .25rem; }
   .banner.sub { padding: 2rem 0; }
+  .banner.sub h1, .banner.sub h2.understated { text-align: left; max-width: 21rem; }
+  .banner.sub .button-one { float: left; }
   .banner.home h1, .banner.home h2.understated { padding-right: 30%; }
   .testimonials.full .inner { margin-bottom: .25rem; }
   .bio { padding: 4rem 0 3.5rem; }
@@ -5664,12 +5685,16 @@ a.plain { text-decoration: none; }
   .contact h3, .contact p, .contact a { text-align: left; }
   .contact p, .contact a { font-size: 1.25rem; float: none !important; padding-bottom: 0.5rem; display: block; }
   .group-feature button { width: 100%; }
+  .site-footer { padding: 1rem 0 2rem; }
   .site-footer .social { width: 45px; }
   .site-footer .social-wrap { margin-bottom: 1rem; }
   .site-footer .site-nav { border: none; }
   .site-footer .site-nav a { width: 100%; display: block; margin-bottom: .25rem; padding: .875rem 0 1rem; margin-left: 0; background: #2d7cb3; border-radius: 3px; color: #fff; -webkit-font-smoothing: antialiased; font-size: 1rem; cursor: pointer; text-decoration: none; }
   .site-footer .site-nav a:hover, .site-footer .site-nav a :focus { background: #256693; }
-  .modal-form { margin: .5rem 0 0; } }
+  .modal-form { margin: .5rem 0 0; }
+  .contact-full h3, .contact h3 { margin: 0 0 .5rem 0; padding-bottom: .5rem; border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.25); }
+  .contact-full h3, .contact-full a, .contact-full p, .contact h3, .contact a, .contact p { text-align: center; }
+  .contact-full a, .contact-full p, .contact a, .contact p { font-size: 1rem; } }
 @media screen and (max-width: 480px) { .splashpage { height: auto; min-height: 0; }
   .splashpage .inner { position: relative; margin: 4rem 0 6rem; }
   .blurb .icon { position: relative; margin: 0 auto 1rem; display: block; }
@@ -5679,14 +5704,18 @@ a.plain { text-decoration: none; }
   .modal-form { margin: 0; border-radius: 0; }
   .modal-form h4 { font-size: 1.0625rem; text-align: left; }
   .button-three.modal-closer { margin-top: 0; } }
-@media screen and (max-width: 400px) { .banner h1 { font-size: 1.5rem; }
-  .banner h2.understated { font-size: 1rem; }
-  .banner.home { min-height: 450px; }
-  .banner.home h1 { margin-top: 0; padding-right: 0; }
+@media screen and (max-width: 400px) { .banner h1 { text-shadow: 1px 1px #000000; }
+  .banner h2.understated { font-size: 1rem; text-shadow: 1px 1px #000000; }
+  .banner.home { min-height: 380px; }
+  .banner.home h1 { margin-top: 0; padding-right: 0; font-size: 1.5rem; }
   .banner.home h2.understated { max-width: 190px; padding-right: 0; } }
 /* ---------------------------------------------------------- Mobile First Images
 ----------------------------------------------------------*/
-@media screen and (min-width: 401px) { .banner.home { background: url("../../images/bg_mbSax1_med.jpg") #000000 no-repeat right bottom; } }
-@media screen and (min-width: 641px) { .banner.home { background: url("../../images/bg_mbSax1_lrg.jpg") #000000 no-repeat center -40px; } }
+@media screen and (min-width: 401px) { .banner.home { background: url("../../images/bg_mbSax1_med.jpg") #000000 no-repeat right bottom; }
+  .banner.sax { background: url("../../images/bg_mbSax2_med.jpg") #000000 no-repeat center center; } }
+@media screen and (min-width: 641px) { .banner.home { background: url("../../images/bg_mbSax1_lrg.jpg") #000000 no-repeat center -40px; }
+  .banner.sax { background: url("../../images/bg_mbSax2_lrg.jpg") #000000 no-repeat center center; }
+  .contact-full { background: url("../../images/bg_mbSax3_med.jpg") #000000 no-repeat center center; } }
+@media screen and (min-width: 960px) { .contact-full { background: url("../../images/bg_mbSax3_lrg.jpg") #000000 no-repeat center center; } }
 
 /*# sourceMappingURL=style.css.map */
