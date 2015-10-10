@@ -15,33 +15,17 @@ is_home: yes
 
 <section class="features">
     <ul class="row wide">
+        {% for feature in page.features %}
         <li class="columns small-11 small-centered medium-4 medium-uncentered">
             <div class="inner">
-                {% include {{ page.feature_1_icon }} %}
-                <h4 class="center">{{ page.feature_1_title }}</h4>
-                <p class="center">{{ page.feature_1_desc }}</p>
-                <a href="{{ page.feature_1_url }}" class="plain"><button class="button-two center">{{ page.feature_2_btn }}</button></a>
+                {% include {{ feature.icon }} %}
+                <h4 class="center">{{ feature.title }}</h4>
+                <p class="center">{{ feature.desc }}</p>
+                <a href="{{ feature.url }}" class="plain"><button class="button-two center">{{ feature.btn }}</button></a>
                 <div class="clear"></div>
             </div>
         </li>
-        <li class="columns small-11 small-centered medium-4 medium-uncentered">
-            <div class="inner">
-                {% include {{ page.feature_2_icon }} %}
-                <h4 class="center">{{ page.feature_2_title }}</h4>
-                <p class="center">{{ page.feature_2_desc }}</p>
-                <a href="{{ page.feature_2_url }}" class="plain"><button class="button-two center">{{ page.feature_2_btn }}</button></a>
-                <div class="clear"></div>
-            </div>
-        </li>
-        <li class="columns small-11 small-centered medium-4 medium-uncentered">
-            <div class="inner">
-                {% include {{ page.feature_3_icon }} %}
-                <h4 class="center">{{ page.feature_3_title }}</h4>
-                <p class="center">{{ page.feature_3_desc }}</p>
-                <a href="{{ page.feature_3_url }}" class="plain"><button class="button-two center">{{ page.feature_3_btn }}</button></a>
-                <div class="clear"></div>
-            </div>
-        </li>
+        {% endfor %}
     </ul>
 </section>
 
@@ -49,30 +33,20 @@ is_home: yes
     <div class="row">
         <h3 class="center columns">{{  page.testimonials_title }}</h3>
         <ul>
+        {% for testimonial in page.testimonials %}
             <li class="columns medium-6">
                 <div class="inner">
                     <div class="row">
                     <span class="author columns large-5">
-                        <h4>{{ page.testimonial_1_author }}</h4>
-                        <p>{{ page.testimonial_1_profession }}</p>
+                        <h4>{{ testimonial.author }}</h4>
+                        <p>{{ testimonial.profession }}</p>
                     </span>
-                    <img src="{{ page.testimonial_1_image }}" class="show-for-large-up" alt="avatar-halliday" width="100" height="100" />
-                    <p class="quote columns large-7">{{ page.testimonial_1_content }}</p>
+                    <img src="{{ testimonial.image }}" class="show-for-large-up" alt="{{ testimonial.img-alt }}" width="100" height="100" />
+                    <p class="quote columns large-7">&ldquo;{{ testimonial.content }}&rdquo;</p>
                     </div>
                 </div>
             </li>
-            <li class="columns medium-6">
-                <div class="inner">
-                    <div class="row">
-                    <span class="author columns large-5">
-                        <h4>{{ page.testimonial_2_author }}</h4>
-                        <p>{{ page.testimonial_2_profession }}</p>
-                    </span>
-                    <img src="{{ page.testimonial_2_image }}" class="show-for-large-up" alt="avatar-halliday" width="100" height="100" />
-                    <p class="quote columns large-7">{{ page.testimonial_2_content }}</p>
-                    </div>
-                </div>
-            </li>
+        {% endfor %}
         </ul>
     </div>
 </section>
