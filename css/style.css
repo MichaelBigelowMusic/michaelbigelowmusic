@@ -5602,13 +5602,15 @@ section { padding: 3rem 0 4.5rem; }
 
 .blocks ul.block-sections li { margin-bottom: 2.75rem; }
 
-.video { background: url("../../images/stressed_linen.png") #202020; }
+.video { background: url("../../images/stressed_linen.png") #202020 repeat; }
 .video h3 { padding-bottom: .5rem; }
 .video p { padding-bottom: .25rem; }
 
 .video-wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0; }
 .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+/* Retina-specific stuff here */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { .video { background: url("../../images/stressed_linen_@2x.png") #202020 repeat; } }
 .blurb { display: block; margin: 0 auto; position: relative; border-top: 0.0625rem solid #ececec; }
 .blurb .icon { position: absolute; left: 0; top: 10px; }
 .blurb p { padding-left: 2.5rem; font-size: 1.25rem; line-height: 1.4375; }

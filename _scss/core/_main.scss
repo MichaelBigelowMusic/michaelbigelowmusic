@@ -547,7 +547,7 @@ section { padding: 3rem 0 4.5rem; }
 // Video Section
 
 .video {
-    background: url('../../images/stressed_linen.png') #202020;
+    background: url('../../images/stressed_linen.png') #202020 repeat;
     h3 { padding-bottom: .5rem; }
     p { padding-bottom: .25rem; }
 }
@@ -563,6 +563,11 @@ section { padding: 3rem 0 4.5rem; }
         width: 100%;
         height: 100%;
     }
+}
+/* Retina-specific stuff here */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .video { background: url('../../images/stressed_linen_@2x.png') #202020 repeat; }
+    
 }
 
 // Minor Structural Elements
