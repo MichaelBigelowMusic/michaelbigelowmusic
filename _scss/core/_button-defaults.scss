@@ -40,6 +40,8 @@ input.button-one {
     text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
+    -webkit-transition: color 300ms ease-out, background-color 300ms ease-out;
+    transition: color 300ms ease-out, background-color 300ms ease-out;
     &:hover {
         background: $button-green;
         color: $white;
